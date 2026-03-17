@@ -1,0 +1,234 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body {
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #98ca65;
+
+	/* full-page background image */
+	background: url(trees.jpg) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed; /* optional: stays fixed on scroll */
+
+	margin: 0;
+	padding: 0;
+	min-height: 100vh; /* ensures full viewport coverage */
+}
+
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #e7d16f;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #ff781f;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* Main Wrapper */
+.page-wrapper{
+	background-image: url(forest.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	padding:40px;
+	margin:0 auto;
+	max-width:1100px;
+	position:relative;
+	font-family: Georgia, serif;
+
+	background-color: rgba(255,255,255,0.85);
+
+	box-shadow: 0 0 25px rgba(0,0,0,0.6),
+	            0 0 50px rgba(23, 24, 23, 0.5);
+
+	border-radius: 10px;
+}
+/* Intro Section */
+.intro{
+	min-width:470px;
+	width:100%;
+	margin-bottom:30px;
+}
+
+header {
+	height: 150px; /* header height */
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* vertical center */
+	align-items: center;     /* horizontal center */
+	text-align: center;
+
+	padding: 0 30px;
+	background: url(leaf.jpg) center/cover no-repeat;
+
+	color: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+	margin-bottom: 25px;
+
+	/* glowing text */
+	text-shadow:
+		0 0 5px #ffffff,
+		0 0 10px #c8ffb0,
+		0 0 15px #a0ff80,
+		0 0 20px #80ff50;
+}
+
+
+/* Title */
+header h1{
+	margin:0;
+	font-size:36px;
+	letter-spacing:2px;
+}
+
+/* Subtitle */
+header h2{
+	margin-top:10px;
+	font-size:18px;
+	font-weight:normal;
+	color:#d8f2d2;
+}
+
+/* Summary Card */
+.summary{
+	background:#f3f8f2;
+	border-left:5px solid #5f8a5f;
+	padding:20px;
+	margin:20px 0;
+	width:220px;
+	float:left;
+	border-radius:6px;
+	box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.summary p{
+	font-style:italic;
+	line-height:1.8;
+	text-align:center;
+}
+
+/* Main Text Area */
+.preamble{
+	margin-left:260px;
+	padding:10px;
+	font-size:15px;
+	line-height:1.8;
+}
+
+/* Supporting Content */
+.supporting{
+	margin-left:260px;
+	padding:10px;
+	margin-bottom:40px;
+}
+
+/* Footer */
+footer{
+	clear:both;
+	text-align:center;
+	padding:20px;
+	background:#3f6b3f;
+	border-radius:6px;
+	margin-top:40px;
+}
+
+footer a{
+	color:white;
+	text-decoration:none;
+	font-weight:bold;
+	margin:0 10px;
+}
+
+footer a:hover{
+	text-decoration:underline;
+}
+
+.sidebar {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	width: 180px;
+	z-index: 1000;
+
+	/* bounce animation */
+	animation: treeBounce 3s infinite ease-in-out;
+}
+
+.sidebar .wrapper { 
+	font: 12px verdana, sans-serif;
+	color: #2f7a2f; /* green text */
+
+	/* tree style background */
+	background: url(like.jpg) repeat-y center top;
+	background-color: rgba(240,255,240,0.9);
+
+	padding: 20px;
+	border-radius: 60px 60px 20px 20px; /* tree crown shape */
+
+	box-shadow: 
+	0 0 15px rgba(0,0,0,0.4),
+	0 0 30px rgba(50,150,50,0.5);
+
+	text-align: center;
+}
+
+/* links color */
+.sidebar a{
+	color:#e3ebe3;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.sidebar a:hover{
+	color:#145214;
+}
+
+/* Bounce animation */
+@keyframes treeBounce{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(-10px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+
+
